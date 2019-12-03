@@ -27,9 +27,9 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>(authentication.getAuthorities());
 
         if (isAdmin(grantedAuthorities)) {
-            url = "/admin/home";
+            url = "/admin";
         } else if (isUser(grantedAuthorities)) {
-            url = "/web";
+            url = "/403";
         }
         return url;
     }
