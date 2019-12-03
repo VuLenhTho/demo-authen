@@ -6,8 +6,8 @@
     <title>Index Page</title>
 </head>
 <body>
-Logged user: <span sec:authentication="name"></span> <br/>
-Roles: <span sec:authentication="principal.authorities"></span>
+Logged user: <span th:text="${name}"></span> <br/>
+Roles: <span th:text="${role}"></span>
 <form action="#" th:action="@{/logout}" method="POST">
     <button type="submit">Logout</button>
 </form>

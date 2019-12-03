@@ -29,7 +29,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         if (isAdmin(grantedAuthorities)) {
             url = "/admin";
         } else if (isUser(grantedAuthorities)) {
-            url = "/403";
+            url = "/user";
         }
         return url;
     }
